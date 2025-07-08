@@ -104,7 +104,7 @@ const LandingBanner = () => {
           Come together with us to change lives for the better.
         </p>
 
-        <button className="px-6 py-4 rounded-full flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-primary/90 text-white cursor-pointer">
+        <button className="px-6 py-4 rounded-full flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer">
           Partner With Us
           <ArrowRightCircle className="size-5 transform group-hover:translate-x-1 transition duration-300" />
         </button>
