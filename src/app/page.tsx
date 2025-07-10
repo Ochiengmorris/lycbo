@@ -71,7 +71,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" gap-0 bg-blue-50/50 px-6 py-10 overflow-hidden aspect-square rounded-xl">
+            <div className=" gap-0 bg-blue-50/50 px-6 py-4 overflow-hidden aspect-square rounded-xl">
               <div className="flex items-center gap-4 w-full">
                 <Image src={new_logo} alt="logo" className="size-6" />
                 <h3 className="uppercase shrink-0 text-xl font-mono tracking-wide">
@@ -131,12 +131,12 @@ export default function Home() {
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Image src={new_logo} alt="logo" className="size-6" />
-              <h3 className="uppercase text-xl shrink-0 font-semibold font-mono tracking-wide">
+              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
                 Services
               </h3>
             </div>
 
-            <h1 className="font-semibold text-5xl mt-4">
+            <h1 className="font-bold text-5xl mt-4">
               Our comprehensive services
             </h1>
             <p className="text-muted-foreground mt-8 text-center">
@@ -216,7 +216,7 @@ export default function Home() {
                 </h3>
               </div>
 
-              <h1 className="font-semibold text-5xl mt-4 tracking-normal">
+              <h1 className="font-bold text-5xl mt-4 tracking-normal">
                 Building hope creating lasting change
               </h1>
 
@@ -306,12 +306,12 @@ export default function Home() {
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Image src={new_logo} alt="logo" className="size-6" />
-              <h3 className="uppercase text-xl shrink-0 font-semibold font-mono tracking-wide">
+              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
                 Our Causes
               </h3>
             </div>
 
-            <h1 className="font-semibold text-5xl mt-4">
+            <h1 className="font-bold text-5xl mt-4">
               Supporting communities causes
             </h1>
             <p className="text-muted-foreground mt-8 text-center">
@@ -507,7 +507,7 @@ export default function Home() {
               </h3>
             </div>
 
-            <h1 className="font-semibold text-5xl mt-4">
+            <h1 className="font-bold text-5xl mt-4">
               Highlights our impactful work
             </h1>
             <p className="text-muted-foreground mt-8 text-center">
@@ -638,6 +638,59 @@ export default function Home() {
 
               <DonationModal />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-b from-accent/70 to-blue-50">
+        <div className="max-w-7xl mx-auto py-24 w-full">
+          <div className="flex items-center flex-col">
+            <div className="flex items-center gap-4">
+              <Image src={new_logo} alt="logo" className="size-6" />
+              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+                Latest Post
+              </h3>
+            </div>
+
+            <h1 className="font-bold text-5xl mt-4">
+              Stories of impact and hope
+            </h1>
+            <p className="text-muted-foreground mt-8 text-center">
+              Explore inspiring stories and updates about our initiatives,
+              successes, and the lives we’ve touched. <br /> See how your
+              support is creating real, lasting change in communities worldwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-10 mt-24 relative">
+            {[
+              { title: "Empowering Communities through Education" },
+              { title: "Protect forests, Futures Our Environmental Mission" },
+              { title: "Partnering for Collaborative Impact Stories" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex-1 w-full rounded-2xl bg-white/50 border border-gray-700/10 px-10 py-10 overflow-hidden"
+              >
+                <h2 className="text-primary font-semibold">Jan 2, 2025</h2>
+                <h1 className="mt-2 text-xl font-bold">{item.title}</h1>
+
+                <div>
+                  <Image
+                    src={whatwedo1}
+                    alt="post-image"
+                    className="w-full h-64 object-cover mt-4 rounded-xl"
+                  />
+                </div>
+
+                <div className="flex mt-4">
+                  <button className="rounded-full flex items-center gap-1 group font-bold transition duration-300 w-fit hover:text-gray-700 tracking-tight text-primary cursor-pointer z-10">
+                    Read More
+                    <LucideArrowRightCircle className="size-5 transform group-hover:translate-x-1 transition duration-300" />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

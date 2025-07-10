@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fredoka } from "next/font/google";
+import { Montserrat, Fredoka, Fira_Code } from "next/font/google";
 import "./globals.css";
 import HeaderInfo from "@/components/HeaderInfo";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Footer from "@/components/Footer";
 
 const FredokaFont = Fredoka({
   variable: "--font-fredoka",
@@ -14,9 +10,16 @@ const FredokaFont = Fredoka({
   weight: "700",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistSans = Montserrat({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const FiraCode = Fira_Code({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -32,11 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${FredokaFont.variable} antialiased`}
+        className={`${geistSans.variable} ${FiraCode.variable} ${FredokaFont.variable} antialiased`}
       >
         <div className="flex flex-col min-h-screen">
           <HeaderInfo />
           <main className="flex-1">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

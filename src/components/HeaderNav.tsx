@@ -59,7 +59,9 @@ const HeaderNav: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
-        isStuck ? "backdrop-blur-md bg-blue-50 shadow-lg" : "bg-transparent"
+        isStuck
+          ? "backdrop-blur-md bg-blue-50 shadow-lg hidden"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
