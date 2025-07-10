@@ -58,7 +58,7 @@ const HeaderNav: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-40 transition-all duration-300 ${
         isStuck ? "backdrop-blur-md bg-blue-50 shadow-lg" : "bg-transparent"
       }`}
     >

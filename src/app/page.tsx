@@ -5,17 +5,23 @@ import female_teacher from "@/images/FxmUtvGWcAEpkeQ.jpg";
 import new_logo from "@/images/new_small_logo.png";
 import whatwedo1 from "@/images/what-we-do-image-1.jpg";
 import whatwedo2 from "@/images/what-we-do-image-2.jpg";
+import homeless1 from "@/images/homeless2.jpg";
 import {
   ArrowRightCircle,
   CheckCircle,
+  GraduationCap,
   HandCoinsIcon,
+  HeartPulse,
   LucideArrowRightCircle,
   LucideDroplets,
   LucideHouse,
+  ShoppingBag,
+  TriangleAlert,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import bannerImage from "@/images/staff-lycbo.jpg";
 import Link from "next/link";
+import InfinteTextSlider from "@/components/InfinteTextSlider";
+import DonationModal from "@/components/DonationModal";
 
 export default function Home() {
   return (
@@ -25,7 +31,7 @@ export default function Home() {
       </div>
       <LandingBanner />
 
-      <div className="bg-blue-50 py-24">
+      <section className="bg-blue-50 py-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 xl:px-16 w-full relative">
             <div className="absolute hidden xl:grid grid-cols-4 gap-x-3 -top-16 -right-24">
@@ -118,9 +124,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-accent/70">
+      <section className="bg-accent/70">
         <div className="max-w-7xl mx-auto py-24 w-full">
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
@@ -197,9 +203,9 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-blue-50">
+      <section className="bg-blue-50">
         <div className="max-w-7xl mx-auto py-24 w-full">
           <div className="grid grid-cols-2">
             <div>
@@ -293,9 +299,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-accent/70">
+      <section className="bg-accent/70">
         <div className="max-w-7xl mx-auto py-24 w-full">
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
@@ -395,16 +401,16 @@ export default function Home() {
             </Card>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-blue-50">
+      <section className="bg-blue-50">
         <div className="max-w-7xl mx-auto py-24 w-full">
           <div className="grid grid-cols-2 gap-8">
             <div className="w-full aspect-square relative overflow-hidden rounded-2xl flex justify-start items-center">
-              <div className="bg-amber-800 w-11/12 aspect-square rounded-full"></div>
+              <div className="bg-blue-800 w-11/12 aspect-square rounded-full"></div>
 
               <div className="bg-blue-50 p-1 absolute w-5/12 bottom-0 right-0 aspect-square rounded-full">
-                <div className="bg-yellow-400 w-full h-full rounded-full"></div>
+                <div className="bg-gray-400 w-full h-full rounded-full"></div>
               </div>
             </div>
 
@@ -489,7 +495,152 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="bg-gradient-to-b from-accent/70 to-blue-50">
+        <div className="max-w-7xl mx-auto py-24 w-full">
+          <div className="flex items-center flex-col">
+            <div className="flex items-center gap-4">
+              <Image src={new_logo} alt="logo" className="size-6" />
+              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+                OUR IMPACT
+              </h3>
+            </div>
+
+            <h1 className="font-semibold text-5xl mt-4">
+              Highlights our impactful work
+            </h1>
+            <p className="text-muted-foreground mt-8 text-center">
+              Discover the positive change we’ve created through our programs,
+              partnerships, and dedicated efforts. <br /> From healthcare and
+              education to environmental sustainability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 px-16 mt-20 gap-12">
+            <div>
+              <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
+                <Image
+                  src={whatwedo2}
+                  alt="image"
+                  className="object-cover w-full h-full"
+                  priority
+                />
+              </div>
+              <div className="mt-10 flex justify-between gap-4">
+                <div>
+                  <h1 className="text-5xl font-bold text-primary mb-4">96%</h1>
+                  <h2 className="font-semibold text-xl">Healthcare Support</h2>
+                  <p className="text-muted-foreground mt-2">
+                    Providing essential healthcare services and resources to
+                    communities.
+                  </p>
+                </div>
+                <div className="relative">
+                  <HeartPulse className="size-16" />
+                  <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-primary/60 w-10 rounded-full aspect-square " />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="mb-10 flex justify-between gap-4">
+                <div>
+                  <h1 className="text-5xl font-bold text-primary mb-4">94%</h1>
+                  <h2 className="font-semibold text-xl">Education Support</h2>
+                  <p className="text-muted-foreground mt-2">
+                    Providing essential Education services and resources to
+                    communities.
+                  </p>
+                </div>
+                <div className="relative">
+                  <GraduationCap className="size-16" />
+                  <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-primary/60 w-10 rounded-full aspect-square " />
+                </div>
+              </div>
+              <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
+                <Image
+                  src={whatwedo2}
+                  alt="image"
+                  className="object-cover w-full h-full"
+                  priority
+                />
+              </div>
+            </div>
+            <div>
+              <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
+                <Image
+                  src={whatwedo2}
+                  alt="image"
+                  className="object-cover w-full h-full"
+                  priority
+                />
+              </div>
+              <div className="mt-10 flex justify-between gap-4">
+                <div>
+                  <h1 className="text-5xl font-bold text-primary mb-4">95%</h1>
+                  <h2 className="font-semibold text-xl">Food Support</h2>
+                  <p className="text-muted-foreground mt-2">
+                    Providing essential Food services and resources to
+                    communities.
+                  </p>
+                </div>
+                <div className="relative">
+                  <ShoppingBag className="size-16" />
+                  <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-primary/60 w-10 rounded-full aspect-square " />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="bg-blue-50 pb-20">
+        <div className="w-full">
+          <InfinteTextSlider />
+        </div>
       </div>
+
+      <section
+        className="bg-accent/70"
+        style={{
+          backgroundImage: `url(${homeless1.src || homeless1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="max-w-7xl mx-auto py-24 w-full">
+          <div className="flex px-4 gap-12 my-16">
+            <div className="flex-1"></div>
+            <div className="flex-1 w-full rounded-2xl gap-0 bg-blue-50 px-10 py-10 overflow-hidden">
+              <div className="flex items-center gap-4 w-full">
+                <Image src={new_logo} alt="logo" className="size-6" />
+                <h3 className="uppercase shrink-0 text-xl font-mono tracking-wide">
+                  Donate Now
+                </h3>
+              </div>
+              <h1 className="mt-4 text-4xl xl:text-5xl font-bold">
+                Donate to us
+              </h1>
+              <p className="mt-4 xl:mt-6 text-muted-foreground">
+                Your generous support enables us to continue the mission of
+                spreading God’s love and serving our community.
+              </p>
+              <div className="mt-4 bg-blue-200/30 relative px-10 py-6 border-l-4 border-blue-500">
+                <h2>
+                  <b>Notice:</b> Test mode is enabled. While in test mode, no
+                  live donations will be processed.
+                </h2>
+
+                <div className="absolute bg-blue-500 rounded-full flex p-2 top-1/2 -translate-y-1/2 -left-5">
+                  <TriangleAlert className="size-5 text-white" />
+                </div>
+              </div>
+
+              <DonationModal />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

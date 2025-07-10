@@ -1,0 +1,57 @@
+"use client";
+
+import React from "react";
+
+const DonationModal = () => {
+  const [amount, setAmount] = React.useState<number | null>(null);
+  return (
+    <div className="mt-4 z-50">
+      <input
+        type="number"
+        name="amount"
+        onChange={(e) =>
+          setAmount(e.target.value === "" ? null : Number(e.target.value))
+        }
+        className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 font-semibold focus:ring-blue-500"
+        placeholder="KES 1,000"
+      />
+      {/* custom placeholder clickable amounts */}
+      <div className="mt-6 grid grid-cols-3 gap-3">
+        {[1000, 2000, 5000, 10000, 20000, 50000].map((amt) => (
+          <button
+            key={amt}
+            onClick={() => setAmount(amt)}
+            className={`px-4 py-4 rounded-lg ${
+              amount === amt
+                ? "bg-blue-500 text-white"
+                : "bg-gray-200 text-gray-700"
+            }`}
+          >
+            KES {amt.toLocaleString()}
+          </button>
+        ))}
+      </div>
+
+      <button
+        onClick={() => {
+          if (amount) {
+            alert(
+              `Thank you for your donation of KES ${amount.toLocaleString()}`
+            );
+          } else {
+            alert("Please enter a valid amount.");
+          }
+        }}
+        className="rounded-full flex justify-center mt-8 py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10"
+      >
+        Donate KES {amount ? amount.toLocaleString() : "0"}
+      </button>
+      <p className="mt-6 text-sm text-gray-500 text-center">
+        Your donation will help us make a difference in the lives of those in
+        need.
+      </p>
+    </div>
+  );
+};
+
+export default DonationModal;
