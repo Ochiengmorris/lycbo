@@ -2,67 +2,96 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "./ui/button";
 import logo from "@/images/lycbo-logo.png";
 import { usePathname } from "next/navigation";
 
-const NavLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+const NAV_LINKS: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Programs" },
-  { href: "/contact", label: "Get Involved" },
+  { href: "/get-involved", label: "Get Involved" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
-const HeaderNav = () => {
+const HeaderNav: React.FC = () => {
   const [isStuck, setIsStuck] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Check if the scroll Y offset is more than 0
-      setIsStuck(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  // Memoize scroll handler to prevent unnecessary re-renders
+  const handleScroll = useCallback(() => {
+    const scrolled = window.scrollY > 130;
+    setIsStuck(scrolled);
   }, []);
 
+  useEffect(() => {
+    // Set initial state
+    handleScroll();
+
+    // Add passive listener for better performance
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  const getLinkClassName = (href: string) => {
+    const baseClasses =
+      "text-muted hover:text-primary transition-colors duration-300";
+
+    if (pathname === href) {
+      return `${baseClasses} text-primary font-bold`;
+    }
+
+    if (isStuck) {
+      return `${baseClasses} text-muted-foreground`;
+    }
+
+    return baseClasses;
+  };
+
   return (
-    <div
+    <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isStuck ? "backdrop-blur-sm shadow-md" : "bg-transparent"
+        isStuck ? "backdrop-blur-md bg-blue-50 shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-2">
-        <div className="flex items-center gap-2">
-          <Image src={logo} alt="lycbo Logo" className="size-20" />
-          <span className="text-3xl font-[900] text-primary">LYCBO</span>
-        </div>
-        <nav className="lg:flex items-center hidden gap-4 uppercase font-semibold">
-          {NavLinks.map((link, index) => (
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+        {/* Logo Section */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <Image src={logo} alt="LYCBO Logo" className="size-20" priority />
+          <span className="text-3xl font-black text-primary">LYCBO.</span>
+        </Link>
+
+        {/* Navigation */}
+        <nav className="hidden lg:flex items-center gap-6 uppercase font-semibold">
+          {NAV_LINKS.map((link) => (
             <Link
               href={link.href}
-              key={index}
-              className={`text-muted hover:text-primary transition duration-300 ${
-                pathname === link.href
-                  ? "text-primary"
-                  : isStuck
-                  ? "text-muted-foreground"
-                  : ""
-              } `}
+              key={link.href}
+              className={getLinkClassName(link.href)}
+              aria-current={pathname === link.href ? "page" : undefined}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <Button className="rounded-full font-semibold px-6 py-3">
-          Donate Now
+
+        {/* CTA Button */}
+        <Button
+          className="rounded-full font-semibold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300"
+          asChild
+        >
+          <Link href="/donate">Donate Now</Link>
         </Button>
       </div>
-    </div>
+    </header>
   );
 };
 
