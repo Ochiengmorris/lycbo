@@ -33,7 +33,7 @@ export default function Home() {
 
       <section className="bg-blue-50 py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 xl:px-16 w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 lg:px-16 w-full relative">
             <div className="absolute hidden xl:grid grid-cols-4 gap-x-3 -top-16 -right-24">
               {["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"].map(
                 (item, index) => (
@@ -71,19 +71,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" gap-0 bg-blue-50/50 px-6 py-4 overflow-hidden aspect-square rounded-xl">
+            <div className=" gap-0 bg-blue-50/50 px-6 py-4 overflow-hidden rounded-xl">
               <div className="flex items-center gap-4 w-full">
                 <Image src={new_logo} alt="logo" className="size-6" />
-                <h3 className="uppercase shrink-0 text-xl font-mono tracking-wide">
+                <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                   About us
                 </h3>
               </div>
 
               <div className="h-full mt-4">
-                <h1 className=" text-4xl xl:text-5xl font-bold">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                   Our journey of compassion and hope
                 </h1>
-                <p className="mt-4 xl:mt-6 text-muted-foreground">
+                <p className="mt-4 xl:mt-6 text-muted-foreground text-sm lg:text-base">
                   LYCBO is an established Youth Empowerment Center with seven
                   (7) registered nascent youth and women-led groups located on
                   the south coast of Kwale County, Lungalunga.
@@ -102,19 +102,19 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <button className="px-6 py-4  rounded-full flex items-center gap-2 group font-semibold transition duration-300 w-fit  bg-primary hover:bg-blue-800 text-white cursor-pointer z-10">
+                    <button className="px-6 py-4 mt-4 rounded-full flex items-center gap-2 group font-semibold transition duration-300 w-fit text-sm lg:text-base bg-primary hover:bg-blue-800 text-white cursor-pointer z-10">
                       About Us
                       <ArrowRightCircle className="size-5 transform group-hover:translate-x-1 transition duration-300" />
                     </button>
                   </div>
-                  <div className="flex-1 bg-gray-300 rounded-2xl p-4 w-full">
+                  <div className="flex-1 hidden lg:block bg-gray-300 rounded-2xl p-4 w-full">
                     <div className="bg-accent w-2/4 mx-auto rounded-full aspect-square overflow-hidden">
                       <Image src={female_teacher} alt="female logo" />
                     </div>
                     <div className="mt-4 text-center">
                       <h3 className="text-xl text-primary">75,958</h3>
-                      <h2 className="font-bold">Helper Fund</h2>
-                      <p className="text-muted-foreground text-xs">
+                      <h2 className="font-bold mt-2">Helper Fund</h2>
+                      <p className="text-muted-foreground mt-2 text-xs">
                         Supporting growth through community- funding.
                       </p>
                     </div>
@@ -128,25 +128,25 @@ export default function Home() {
 
       <section className="bg-accent/70">
         <div className="max-w-7xl mx-auto py-24 w-full">
-          <div className="flex items-center flex-col">
+          <div className="flex items-center flex-col px-4 lg:px-0">
             <div className="flex items-center gap-4">
               <Image src={new_logo} alt="logo" className="size-6" />
-              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+              <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                 Services
               </h3>
             </div>
 
-            <h1 className="font-bold text-5xl mt-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
               Our comprehensive services
             </h1>
-            <p className="text-muted-foreground mt-8 text-center">
+            <p className="text-muted-foreground mt-8 text-center text-sm">
               Our services are focused on creating lasting change through
               community development, healthcare <br /> access, educational
               support, and emergency relief.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mt-16 relative">
+          <div className="grid grid-cols-1 px-4 lg:px-0 lg:grid-cols-3 gap-8 mt-16 relative ">
             {[
               { title: "Educational Support" },
               { title: "Healthcare Access" },
@@ -191,7 +191,7 @@ export default function Home() {
               )}
             </div>
           </div>
-          <div className=" mt-16 w-full flex justify-center gap-2">
+          <div className=" mt-16 w-full flex flex-col lg:flex-row px-4 lg:px-0 text-center justify-center gap-2">
             <span className="text-muted-foreground text-center">
               You will be satisfied with our work. Contact us today{" "}
             </span>{" "}
@@ -206,17 +206,17 @@ export default function Home() {
       </section>
 
       <section className="bg-blue-50">
-        <div className="max-w-7xl mx-auto py-24 w-full">
-          <div className="grid grid-cols-2">
+        <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div>
               <div className="flex items-center gap-4">
                 <Image src={new_logo} alt="logo" className="size-6" />
-                <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+                <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                   What we do
                 </h3>
               </div>
 
-              <h1 className="font-bold text-5xl mt-4 tracking-normal">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
                 Building hope creating lasting change
               </h1>
 
@@ -224,13 +224,13 @@ export default function Home() {
                 <div className="flex gap-6 mb-7">
                   <div className="relative">
                     <HandCoinsIcon className="size-20" />
-                    <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-primary/60 w-10 rounded-full aspect-square " />
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-8 lg:bottom-0 bg-primary/60 w-10 rounded-full aspect-square " />
                   </div>
                   <div>
                     <h2 className="font-semibold text-xl">
                       Economic Empowerement
                     </h2>
-                    <p className="text-muted-foreground mt-2">
+                    <p className="text-muted-foreground mt-2 text-sm lg:text-base">
                       Empowering individuals through job training, financial
                       literacy, and small business support to create sustainable
                       livelihoods.
@@ -240,13 +240,13 @@ export default function Home() {
                 <div className="flex gap-6 py-7 border-y">
                   <div className="relative">
                     <LucideDroplets className="size-20" />
-                    <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-primary/60 w-10 rounded-full aspect-square " />
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-8 lg:bottom-0 bg-primary/60 w-10 rounded-full aspect-square " />
                   </div>
                   <div>
                     <h2 className="font-semibold text-xl">
                       Clean Water and Sanitation
                     </h2>
-                    <p className="text-muted-foreground mt-2">
+                    <p className="text-muted-foreground mt-2 text-sm lg:text-base">
                       Empowering individuals through job training, financial
                       literacy, and small business support to create sustainable
                       livelihoods.
@@ -256,13 +256,13 @@ export default function Home() {
                 <div className="flex gap-6 pt-7">
                   <div className="relative">
                     <LucideHouse className="size-20" />
-                    <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-primary/60 w-10 rounded-full aspect-square " />
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-14 lg:bottom-0 bg-primary/60 w-10 rounded-full aspect-square " />
                   </div>
                   <div>
                     <h2 className="font-semibold text-xl">
                       Housing and Shelter Initiatives
                     </h2>
-                    <p className="text-muted-foreground mt-2">
+                    <p className="text-muted-foreground mt-2 text-sm lg:text-base">
                       Empowering individuals through job training, financial
                       literacy, and small business support to create sustainable
                       livelihoods.
@@ -272,25 +272,25 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="w-4/6 ml-auto bg-blue-800 rounded-2xl overflow-hidden h-[650px]">
+            <div className="relative mt-12 lg:mt-0">
+              <div className="lg:w-4/6 w-10/12 ml-auto bg-blue-800 rounded-2xl overflow-hidden lg:h-[650px] h-[500px]">
                 <Image
                   src={whatwedo1}
                   alt="what-we-do"
-                  className="w-full h-full"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute w-[280px] bg-blue-50 aspect-square rounded-full bottom-12 left-10 p-1.5 overflow-hidden">
+              <div className="absolute lg:w-[280px] w-[150px] bg-blue-50 aspect-square rounded-full bottom-12 lg:left-10 -left-2 p-1.5 overflow-hidden">
                 <div className="bg-slate-700 h-full w-full rounded-full">
                   <Image
                     src={whatwedo2}
                     alt="what-we-do"
-                    className="w-full h-full rounded-full"
+                    className="w-full h-full rounded-full object-cover"
                   />
                 </div>
               </div>
 
-              <div className="absolute top-24 left-4">
+              <div className="absolute top-24 lg:left-4 -left-16">
                 <button className="px-6 py-4 -rotate-90 rounded-2xl flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer z-10">
                   {" "}
                   <HandCoinsIcon className="size-6 mr-2" /> Donate Now
@@ -302,26 +302,26 @@ export default function Home() {
       </section>
 
       <section className="bg-accent/70">
-        <div className="max-w-7xl mx-auto py-24 w-full">
+        <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Image src={new_logo} alt="logo" className="size-6" />
-              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+              <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                 Our Causes
               </h3>
             </div>
 
-            <h1 className="font-bold text-5xl mt-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 text-center">
               Supporting communities causes
             </h1>
-            <p className="text-muted-foreground mt-8 text-center">
+            <p className="text-muted-foreground mt-8 text-center text-sm">
               We focus on impactful causes that address urgent community needs,
               from healthcare and education <br /> to food security and for
               lasting change.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 mt-20 gap-8 relative">
+          <div className="grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 mt-20 gap-8 relative">
             <div className="absolute grid grid-cols-4 gap-x-3 bottom-5 -left-10">
               {["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"].map(
                 (item, index) => (
@@ -343,14 +343,14 @@ export default function Home() {
                   <div className="shine-effect" />
                 </div>
               </div>
-              <h2 className="text-center mt-4 font-semibold text-2xl">
+              <h2 className="text-center mt-4 font-semibold text-lg lg:text-2xl">
                 Healthcare access
               </h2>
-              <p className="text-center">
+              <p className="text-center text-sm lg:text-base">
                 Ensuring education and resouces for undeserved communities.
               </p>
 
-              <button className="rounded-full flex justify-center mt-8 py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10">
+              <button className="rounded-full flex justify-center mt-8 py-3 lg:py-4  items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 lg:text-lg text-white cursor-pointer z-10">
                 Donate Now
               </button>
             </Card>
@@ -366,14 +366,14 @@ export default function Home() {
                   <div className="shine-effect" />
                 </div>
               </div>
-              <h2 className="text-center mt-4 font-semibold text-2xl">
+              <h2 className="text-center mt-4 font-semibold text-lg lg:text-2xl">
                 Healthcare access
               </h2>
-              <p className="text-center">
+              <p className="text-center text-sm lg:text-base">
                 Ensuring education and resouces for undeserved communities.
               </p>
 
-              <button className="rounded-full flex justify-center mt-8 py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10">
+              <button className="rounded-full flex justify-center mt-8  py-3 lg:py-4  items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 lg:text-lg text-white cursor-pointer z-10">
                 Donate Now
               </button>
             </Card>
@@ -388,14 +388,14 @@ export default function Home() {
                   <div className="shine-effect" />
                 </div>
               </div>
-              <h2 className="text-center mt-4 font-semibold text-2xl">
+              <h2 className="text-center mt-4 font-semibold text-lg lg:text-2xl">
                 Healthcare access
               </h2>
-              <p className="text-center">
+              <p className="text-center text-sm lg:text-base">
                 Ensuring education and resouces for undeserved communities.
               </p>
 
-              <button className="rounded-full flex justify-center mt-8 py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10">
+              <button className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 lg:text-lg text-white cursor-pointer z-10">
                 Donate Now
               </button>
             </Card>
@@ -404,8 +404,8 @@ export default function Home() {
       </section>
 
       <section className="bg-blue-50">
-        <div className="max-w-7xl mx-auto py-24 w-full">
-          <div className="grid grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="w-full aspect-square relative overflow-hidden rounded-2xl flex justify-start items-center">
               <div className="bg-blue-800 w-11/12 aspect-square rounded-full"></div>
 
@@ -417,23 +417,23 @@ export default function Home() {
             <div className="bg-blue-50/50 px-2 py-10 overflow-hidden aspect-square rounded-xl">
               <div className="flex items-center gap-4 w-full">
                 <Image src={new_logo} alt="logo" className="size-6" />
-                <h3 className="uppercase shrink-0 text-xl font-mono tracking-wide">
+                <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                   Why Choose Us
                 </h3>
               </div>
 
               <div className="h-full mt-4 flex flex-col">
-                <h1 className=" text-4xl xl:text-5xl font-bold">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                   Why we stand out together
                 </h1>
-                <p className="mt-4 xl:mt-6 text-muted-foreground">
+                <p className="mt-4 xl:mt-6 text-muted-foreground text-sm lg:text-base">
                   Our dedication, transparency, and community-driven approach
                   set us apart. partnering with us,programs that create
                   meaningful change.
                 </p>
 
                 <div className="flex mt-16 flex-col">
-                  <div className="flex gap-6 font-semibold">
+                  <div className="flex gap-6 font-semibold flex-col lg:flex-row">
                     <div className="flex items-center gap-2">
                       <div className="relative">
                         <CheckCircle className="size-10" />
@@ -498,26 +498,26 @@ export default function Home() {
       </section>
 
       <section className="bg-gradient-to-b from-accent/70 to-blue-50">
-        <div className="max-w-7xl mx-auto py-24 w-full">
+        <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Image src={new_logo} alt="logo" className="size-6" />
-              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+              <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                 OUR IMPACT
               </h3>
             </div>
 
-            <h1 className="font-bold text-5xl mt-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
               Highlights our impactful work
             </h1>
-            <p className="text-muted-foreground mt-8 text-center">
+            <p className="text-muted-foreground mt-8 text-center text-sm lg:text-base">
               Discover the positive change we’ve created through our programs,
               partnerships, and dedicated efforts. <br /> From healthcare and
               education to environmental sustainability.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 px-16 mt-20 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 lg:px-16 mt-20 gap-12">
             <div>
               <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
                 <Image
@@ -529,9 +529,11 @@ export default function Home() {
               </div>
               <div className="mt-10 flex justify-between gap-4">
                 <div>
-                  <h1 className="text-5xl font-bold text-primary mb-4">96%</h1>
-                  <h2 className="font-semibold text-xl">Healthcare Support</h2>
-                  <p className="text-muted-foreground mt-2">
+                  <h1 className="text-3xl lg:text-5xl font-bold text-primary mb-4">
+                    96%
+                  </h1>
+                  <h2 className="font-semibold text-xl ">Healthcare Support</h2>
+                  <p className="text-muted-foreground mt-2 text-sm lg:text-base">
                     Providing essential healthcare services and resources to
                     communities.
                   </p>
@@ -545,9 +547,11 @@ export default function Home() {
             <div>
               <div className="mb-10 flex justify-between gap-4">
                 <div>
-                  <h1 className="text-5xl font-bold text-primary mb-4">94%</h1>
-                  <h2 className="font-semibold text-xl">Education Support</h2>
-                  <p className="text-muted-foreground mt-2">
+                  <h1 className="text-3xl lg:text-5xl font-bold text-primary mb-4">
+                    94%
+                  </h1>
+                  <h2 className="font-semibold text-xl ">Education Support</h2>
+                  <p className="text-muted-foreground mt-2 text-sm lg:text-base">
                     Providing essential Education services and resources to
                     communities.
                   </p>
@@ -577,9 +581,11 @@ export default function Home() {
               </div>
               <div className="mt-10 flex justify-between gap-4">
                 <div>
-                  <h1 className="text-5xl font-bold text-primary mb-4">95%</h1>
-                  <h2 className="font-semibold text-xl">Food Support</h2>
-                  <p className="text-muted-foreground mt-2">
+                  <h1 className="text-3xl lg:text-5xl font-bold text-primary mb-4">
+                    95%
+                  </h1>
+                  <h2 className="font-semibold text-xl ">Food Support</h2>
+                  <p className="text-muted-foreground mt-2 text-sm lg:text-base">
                     Providing essential Food services and resources to
                     communities.
                   </p>
@@ -610,22 +616,22 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto py-24 w-full">
           <div className="flex px-4 gap-12 my-16">
-            <div className="flex-1"></div>
+            <div className="flex-1 hidden lg:block"></div>
             <div className="flex-1 w-full rounded-2xl gap-0 bg-blue-50 px-10 py-10 overflow-hidden">
               <div className="flex items-center gap-4 w-full">
                 <Image src={new_logo} alt="logo" className="size-6" />
-                <h3 className="uppercase shrink-0 text-xl font-mono tracking-wide">
+                <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                   Donate Now
                 </h3>
               </div>
-              <h1 className="mt-4 text-4xl xl:text-5xl font-bold">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2">
                 Donate to us
               </h1>
-              <p className="mt-4 xl:mt-6 text-muted-foreground">
+              <p className="mt-4 xl:mt-6 text-muted-foreground text-sm lg:text-base">
                 Your generous support enables us to continue the mission of
                 spreading God’s love and serving our community.
               </p>
-              <div className="mt-4 bg-blue-200/30 relative px-10 py-6 border-l-4 border-blue-500">
+              <div className="mt-4 bg-blue-200/30 relative px-10 py-6 border-l-4 border-blue-500 text-sm lg:text-base text-blue-800">
                 <h2>
                   <b>Notice:</b> Test mode is enabled. While in test mode, no
                   live donations will be processed.
@@ -643,26 +649,26 @@ export default function Home() {
       </section>
 
       <section className="bg-gradient-to-b from-accent/70 to-blue-50">
-        <div className="max-w-7xl mx-auto py-24 w-full">
+        <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
           <div className="flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Image src={new_logo} alt="logo" className="size-6" />
-              <h3 className="uppercase text-xl shrink-0 font-mono tracking-wide">
+              <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
                 Latest Post
               </h3>
             </div>
 
-            <h1 className="font-bold text-5xl mt-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
               Stories of impact and hope
             </h1>
-            <p className="text-muted-foreground mt-8 text-center">
+            <p className="text-muted-foreground mt-8 text-center text-sm lg:text-base">
               Explore inspiring stories and updates about our initiatives,
               successes, and the lives we’ve touched. <br /> See how your
               support is creating real, lasting change in communities worldwide.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-10 mt-24 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-24 relative">
             {[
               { title: "Empowering Communities through Education" },
               { title: "Protect forests, Futures Our Environmental Mission" },

@@ -9,23 +9,23 @@ import XIcon from "@/images/icons/XIcon";
 const Footer = () => {
   return (
     <div className="bg-gradient-to-b from-accent to-accent">
-      <div className="max-w-7xl mx-auto pt-24 w-full">
-        <div className="grid grid-cols-2">
+      <div className="max-w-7xl mx-auto pt-24 w-full px-4 lg:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="border-r border-muted-foreground/20 pr-8">
             <Link href="/" className="flex items-center gap-2 group">
               <Image src={logo} alt="LYCBO Logo" className="size-20" priority />
               <span className="text-3xl font-black text-primary">LYCBO.</span>
             </Link>
 
-            <p className="text-muted-foreground mt-4">
+            <p className="text-muted-foreground mt-4 text-sm lg:text-base">
               LYCBO is a non-profit organization dedicated to improving the
               lives of children and families in need. Through our various
               programs and initiatives, we strive to create lasting change and
               build a brighter future for all.
             </p>
-            <div className="flex items-center mt-6 justify-start">
+            <div className="flex items-center mt-6 justify-start gap-0">
               <div className="flex-1">
-                <h2>Toll free customer care</h2>
+                <h2>Customer care</h2>
                 <p className="text-muted-foreground mt-2 font-semibold">
                   +254 700 000 000
                 </p>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="pl-8">
+          <div className="lg:pl-8 mt-8 lg:mt-0">
             <div className="flex items-center gap-2">
               <input
                 type="email"
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 mt-8">
               <div>
                 <h2 className="font-bold">Quick Links</h2>
-                <ul className="mt-2 space-y-4">
+                <ul className="mt-2 space-y-4 text-sm lg:text-base">
                   <li>
                     <Link
                       href="/"
@@ -106,7 +106,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="font-bold">Useful Links</h2>
-                <ul className="mt-2 space-y-4">
+                <ul className="mt-2 space-y-4 text-sm lg:text-base">
                   <li>
                     <Link
                       href="/"
@@ -146,7 +146,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full py-6 bg-white/20 text-center text-muted-foreground">
+      <div className="w-full py-6 bg-white/20 text-center text-sm lg:text-base text-muted-foreground">
         Copyright © 2025 All Rights Reserved.
       </div>
     </div>

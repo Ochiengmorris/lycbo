@@ -42,11 +42,11 @@ const DonationModal = () => {
             alert("Please enter a valid amount.");
           }
         }}
-        className="rounded-full flex justify-center mt-8 py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10"
+        className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10"
       >
         Donate KES {amount ? amount.toLocaleString() : "0"}
       </button>
-      <p className="mt-6 text-sm text-gray-500 text-center">
+      <p className="mt-6 text-xs lg:text-sm text-gray-500 text-center">
         Your donation will help us make a difference in the lives of those in
         need.
       </p>

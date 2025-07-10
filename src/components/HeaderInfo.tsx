@@ -7,19 +7,19 @@ import XIcon from "@/images/icons/XIcon";
 
 const HeaderInfo = () => {
   return (
-    <div className="relative">
+    <div className="relative hidden lg:block">
       <div className="bg-primary">
         <div className="max-w-7xl flex items-center justify-between mx-auto">
           <div className="flex items-center gap-4 p-2 text-sm text-muted">
             <div>
               <PhoneIcon className="inline-block size-4 mr-2 " />
-              <span className="">
+              <span className="text-xs md:text-sm">
                 Talk With us: <b>+254-742642356</b>
               </span>
             </div>
             <div>
               <MailIcon className="inline-block mr-2 size-4 " />
-              <span className="">
+              <span className="text-xs md:text-sm">
                 Send us an email:{" "}
                 <Link href="mailto:info@example.com" className="underline ">
                   <b> info@example.com</b>
@@ -28,7 +28,7 @@ const HeaderInfo = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 mr-2 text-primary">
+          <div className="flex items-center gap-2 mr-3 md:mr-2 text-primary">
             <Link href={"/"} className="">
               <FacebookIcon color="#fff" />
             </Link>

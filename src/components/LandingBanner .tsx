@@ -89,7 +89,7 @@ const LandingBanner = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center h-full max-w-7xl mx-auto px-4 text-white">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mb-4">
           <Image src={new_logo} alt="logo" className="size-6" />
           <h3 className="uppercase">Welcome to our Organization</h3>
         </div>

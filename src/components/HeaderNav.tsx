@@ -6,6 +6,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "./ui/button";
 import logo from "@/images/lycbo-logo.png";
 import { usePathname } from "next/navigation";
+import { MenuIcon } from "lucide-react";
 
 interface NavLink {
   href: string;
@@ -67,8 +68,15 @@ const HeaderNav: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
         {/* Logo Section */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image src={logo} alt="LYCBO Logo" className="size-20" priority />
-          <span className="text-3xl font-black text-primary">LYCBO.</span>
+          <Image
+            src={logo}
+            alt="LYCBO Logo"
+            className="size-10 md:size-20"
+            priority
+          />
+          <span className="md:text-3xl text-2xl font-black text-primary">
+            LYCBO.
+          </span>
         </Link>
 
         {/* Navigation */}
@@ -87,10 +95,21 @@ const HeaderNav: React.FC = () => {
 
         {/* CTA Button */}
         <Button
-          className="rounded-full font-semibold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300"
+          className="rounded-full hidden md:flex font-semibold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300"
           asChild
         >
           <Link href="/donate">Donate Now</Link>
+        </Button>
+
+        {/* Mobile Menu Button */}
+        <Button
+          className="lg:hidden rounded-xl bg-primary text-white hover:bg-primary/90 transition-colors duration-300"
+          aria-label="Toggle Menu"
+          onClick={() => {
+            // Implement mobile menu toggle logic here
+          }}
+        >
+          <MenuIcon className="size-6" />
         </Button>
       </div>
     </header>

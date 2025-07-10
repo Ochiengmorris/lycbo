@@ -46,7 +46,7 @@ const InfiniteTextSlider = () => {
         {/* Render the messages twice for seamless loop */}
         {[...messages, ...messages].map((message, index) => (
           <div key={index} className="text-item">
-            <span className="text-8xl font-bold text-outline tracking-wide uppercase">
+            <span className=" text-6xl lg:text-8xl font-bold text-outline tracking-wide uppercase">
               {message} <span className="ml-4 align-middle">*</span>
             </span>
           </div>
