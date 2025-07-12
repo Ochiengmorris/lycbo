@@ -74,12 +74,7 @@ const HeaderNav: React.FC = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Image
-              src={logo}
-              alt="LYCBO Logo"
-              className="size-10 md:size-20"
-              priority
-            />
+            <Image src={logo} alt="LYCBO Logo" className="size-10" priority />
             <span className="md:text-3xl text-2xl font-black text-primary">
               LYCBO.
             </span>
