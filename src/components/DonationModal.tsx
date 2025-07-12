@@ -6,15 +6,21 @@ const DonationModal = () => {
   const [amount, setAmount] = React.useState<number | null>(null);
   return (
     <div className="mt-4 z-50">
-      <input
-        type="number"
-        name="amount"
-        onChange={(e) =>
-          setAmount(e.target.value === "" ? null : Number(e.target.value))
-        }
-        className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 font-semibold focus:ring-blue-500"
-        placeholder="KES 1,000"
-      />
+      <div className="border border-gray-300 rounded-md relative">
+        <input
+          type="number"
+          name="amount"
+          value={amount || ""}
+          onChange={(e) =>
+            setAmount(e.target.value === "" ? null : Number(e.target.value))
+          }
+          className="w-full py-4 rounded-md focus:outline-none focus:ring-2 font-semibold focus:ring-blue-500 pl-14 pr-2 text-lg"
+          placeholder={`1,000`}
+        />
+        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+          KES
+        </span>
+      </div>
       {/* custom placeholder clickable amounts */}
       <div className="mt-6 grid grid-cols-3 gap-3">
         {[1000, 2000, 5000, 10000, 20000, 50000].map((amt) => (
@@ -23,7 +29,7 @@ const DonationModal = () => {
             onClick={() => setAmount(amt)}
             className={`px-4 py-4 rounded-lg ${
               amount === amt
-                ? "bg-blue-500 text-white"
+                ? "bg-primary text-white"
                 : "bg-gray-200 text-gray-700"
             }`}
           >
