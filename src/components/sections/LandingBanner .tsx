@@ -211,7 +211,7 @@ const LandingBanner = () => {
         animate="visible"
       >
         <motion.div
-          className="flex items-center gap-4 mb-4"
+          className="flex items-center gap-4 mb-4 justify-center md:justify-start"
           variants={itemVariants}
         >
           <motion.div variants={logoVariants}>
@@ -226,7 +226,7 @@ const LandingBanner = () => {
         </motion.div>
 
         <motion.h1
-          className="text-4xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight"
+          className="text-4xl md:text-7xl lg:text-8xl font-bold mb-4 text-center md:text-start leading-tight"
           variants={titleVariants}
         >
           <motion.span
@@ -256,7 +256,7 @@ const LandingBanner = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-2xl text-white/70 font-medium mb-10 max-w-3xl"
+          className="text-lg md:text-2xl text-white/70 text-center md:text-start font-medium mb-10 max-w-3xl"
           variants={itemVariants}
         >
           Every little gesture of kindness generates a wave of positive impact.
@@ -264,7 +264,7 @@ const LandingBanner = () => {
         </motion.p>
 
         <motion.button
-          className="px-6 py-4 rounded-full flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer"
+          className="px-6 py-4 rounded-full self-center md:self-start flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer"
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
