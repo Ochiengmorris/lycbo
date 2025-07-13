@@ -167,9 +167,8 @@ const LandingBanner = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[955px] w-full overflow-hidden"
+      className="relative h-[600px] md:h-[955px] w-full overflow-hidden"
     >
-      {/* Background image with parallax */}
       <motion.div
         ref={imageRef}
         className="absolute inset-0 w-full h-[120%] -z-20"

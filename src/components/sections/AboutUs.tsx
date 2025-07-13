@@ -66,17 +66,12 @@ const AboutUs = () => {
             <motion.div
               className="w-3/4 rounded-2xl place-self-end pb-2 aspect-square"
               variants={imageVariants}
-              whileHover={{
-                scale: 1.05,
-                rotate: 2,
-                transition: { duration: 0.3 },
-              }}
             >
               <div className="w-full relative h-full bg-amber-300 rounded-2xl overflow-hidden">
                 <Image
                   src={whatwedo2}
                   alt="what-we-do"
-                  className="w-full h-full group-hover:"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="shine-effect" />
@@ -87,11 +82,6 @@ const AboutUs = () => {
             <motion.div
               className="absolute -bottom-2 rounded-2xl bg-blue-50 -left-2 w-8/12 aspect-square p-2"
               variants={overlayImageVariants}
-              whileHover={{
-                scale: 1.05,
-                rotate: -2,
-                transition: { duration: 0.3 },
-              }}
             >
               <div className="bg-black relative rounded-2xl overflow-hidden w-full h-full">
                 <Image
