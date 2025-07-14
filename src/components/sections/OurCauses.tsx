@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Card } from "../ui/card";
 import new_logo from "@/images/new_small_logo.png";
-import whatwedo1 from "@/images/what-we-do-image-1.jpg";
+import whatwedo1 from "@/images/lycbo-img2.jpg";
 import {
   cardVariants,
   containerVariants,
@@ -57,7 +57,7 @@ const OurCauses = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 mt-20 gap-8 relative"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8 relative"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import new_logo from "@/images/new_small_logo.png";
-import whatwedo1 from "@/images/what-we-do-image-1.jpg";
+import whatwedo1 from "@/images/ibra-lycbo.jpg";
 import {
   buttonVariants,
   cardVariants,
@@ -87,9 +87,8 @@ const LatestPost = () => {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="flex-1 w-full rounded-2xl bg-white/50 border border-gray-700/10 px-10 py-10 overflow-hidden cursor-pointer"
+              className="flex-1 w-full rounded-2xl bg-white/50 shadow px-10 py-10 overflow-hidden cursor-pointer"
               variants={cardVariants}
-              whileHover="hover"
               whileTap={{ scale: 0.98 }}
             >
               <motion.h2
@@ -102,7 +101,7 @@ const LatestPost = () => {
               </motion.h2>
 
               <motion.h1
-                className="mt-2 text-xl font-bold"
+                className="mt-2 text-xl font-bold line-clamp-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
@@ -114,12 +113,17 @@ const LatestPost = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
+                className="relative h-64 rounded-xl mt-4 group overflow-hidden"
               >
                 <Image
                   src={whatwedo1}
                   alt="post-image"
-                  className="w-full h-64 object-cover mt-4 rounded-xl"
+                  className="w-full h-64 object-cover"
                 />
+                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="shine-effect" />
+                </div>
               </motion.div>
 
               <motion.div

@@ -25,9 +25,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center mt-6 justify-start gap-0">
               <div className="flex-1">
-                <h2>Customer care</h2>
+                <h2>Call Us</h2>
                 <p className="text-muted-foreground mt-2 font-semibold">
-                  +254 700 000 000
+                  +254 703 733 835
                 </p>
               </div>
               <div className="flex-1">

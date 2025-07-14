@@ -6,13 +6,7 @@ import { motion } from "framer-motion";
 import bannerImage from "@/images/staff-lycbo.jpg";
 import new_logo from "@/images/new_small_logo.png";
 import { ArrowRightCircle } from "lucide-react";
-import {
-  buttonVariants,
-  containerVariants,
-  itemVariants,
-  logoVariants,
-  overlayImageVariants,
-} from "@/lib/constants";
+import { containerVariants, itemVariants, logoVariants } from "@/lib/constants";
 
 const LandingBanner = () => {
   const imageRef = useRef<HTMLDivElement | null>(null);
@@ -124,14 +118,14 @@ const LandingBanner = () => {
         animate="visible"
       >
         <motion.div
-          className="flex items-center gap-4 mb-4 justify-center md:justify-start"
+          className="flex items-center gap-4 mb-4 mt-4 justify-center md:justify-start"
           variants={itemVariants}
         >
           <motion.div variants={logoVariants}>
             <Image src={new_logo} alt="logo" className="size-6" />
           </motion.div>
           <motion.h3
-            className="uppercase tracking-wider"
+            className="uppercase tracking-wider text-sm lg:text-base "
             variants={itemVariants}
           >
             Welcome to our Organization
