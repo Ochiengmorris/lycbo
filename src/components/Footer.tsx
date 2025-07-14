@@ -9,7 +9,7 @@ import XIcon from "@/images/icons/XIcon";
 const Footer = () => {
   return (
     <div className="bg-gradient-to-b from-accent to-accent">
-      <div className="max-w-7xl mx-auto pt-24 w-full px-4">
+      <div className="max-w-7xl mx-auto pt-24 pb-8 w-full px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="border-r border-muted-foreground/20 pr-8">
             <Link href="/" className="flex items-center gap-2 group">
@@ -61,7 +61,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="w-full p-3 rounded-lg border border-muted-foreground/20 focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <button className="bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+              <button className="bg-primary text-white font-semibold md:px-6 py-3 px-4 rounded-lg text-sm md:text-base  hover:bg-primary/90 transition-colors">
                 Subscribe
               </button>
             </div>
@@ -147,7 +147,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full py-6 bg-white/20 text-center text-sm lg:text-base text-muted-foreground">
-        Copyright © 2025 All Rights Reserved.
+        Copyright © 2025 | LYCBO All Rights Reserved.
       </div>
     </div>
   );

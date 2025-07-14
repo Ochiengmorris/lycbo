@@ -5,8 +5,8 @@ import { ArrowRightCircle } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import new_logo from "@/images/new_small_logo.png";
-import whatwedo1 from "@/images/what-we-do-image-1.jpg";
-import whatwedo2 from "@/images/what-we-do-image-2.jpg";
+import whatwedo2 from "@/images/AboutUs1.jpg";
+import whatwedo1 from "@/images/female-members.jpg";
 import female_teacher from "@/images/FxmUtvGWcAEpkeQ.jpg";
 import {
   buttonVariants,
@@ -61,18 +61,19 @@ const AboutUs = () => {
           {/* Image Section */}
           <motion.div
             className="aspect-square overflow-hidden flex flex-col relative gap-2 rounded-xl"
-            variants={itemVariants}
+            // variants={itemVariants}
           >
             <motion.div
               className="w-3/4 rounded-2xl place-self-end pb-2 aspect-square"
               variants={imageVariants}
             >
-              <div className="w-full relative h-full bg-amber-300 rounded-2xl overflow-hidden">
+              <div className="w-full relative h-full group bg-amber-300 rounded-2xl overflow-hidden">
                 <Image
                   src={whatwedo2}
                   alt="what-we-do"
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black/20 transition-opacity duration-300" />
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="shine-effect" />
                 </div>
@@ -80,8 +81,8 @@ const AboutUs = () => {
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-2 rounded-2xl bg-blue-50 -left-2 w-8/12 aspect-square p-2"
-              variants={overlayImageVariants}
+              className="absolute -bottom-2 group rounded-2xl bg-blue-50 -left-2 w-8/12 aspect-square p-2"
+              variants={imageVariants}
             >
               <div className="bg-black relative rounded-2xl overflow-hidden w-full h-full">
                 <Image
@@ -89,6 +90,7 @@ const AboutUs = () => {
                   alt="what-we-do"
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black/20 transition-opacity duration-300" />
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="shine-effect" />
                 </div>
@@ -99,7 +101,7 @@ const AboutUs = () => {
           {/* Content Section */}
           <motion.div
             className="gap-0 bg-blue-50/50 px-6 py-4 overflow-hidden rounded-xl"
-            variants={itemVariants}
+            // variants={itemVariants}
           >
             <motion.div
               className="flex items-center gap-4 w-full"
@@ -119,7 +121,7 @@ const AboutUs = () => {
             <div className="h-full mt-4">
               <motion.h1
                 className="text-3xl md:text-4xl lg:text-5xl font-bold "
-                variants={itemVariants}
+                // variants={itemVariants}
               >
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
@@ -208,10 +210,6 @@ const AboutUs = () => {
                 <motion.div
                   className="flex-1 hidden lg:block bg-gray-300 rounded-2xl p-4 w-full"
                   variants={statsVariants}
-                  whileHover={{
-                    scale: 1.02,
-                    transition: { duration: 0.3 },
-                  }}
                 >
                   <motion.div
                     className="bg-accent w-2/4 mx-auto rounded-full aspect-square overflow-hidden"

@@ -9,6 +9,7 @@ import WhyUs from "@/components/sections/WhyUs";
 import OurCauses from "@/components/sections/OurCauses";
 import AboutUs from "@/components/sections/AboutUs";
 import DonationSection from "@/components/sections/Donations";
+import Partners from "@/components/sections/Partners";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
       <DonationSection />
 
       <LatestPost />
+      <Partners />
     </div>
   );
 }

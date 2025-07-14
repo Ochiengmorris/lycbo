@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 import bannerImage from "@/images/staff-lycbo.jpg";
 import new_logo from "@/images/new_small_logo.png";
 import { ArrowRightCircle } from "lucide-react";
+import {
+  buttonVariants,
+  containerVariants,
+  itemVariants,
+  logoVariants,
+  overlayImageVariants,
+} from "@/lib/constants";
 
 const LandingBanner = () => {
   const imageRef = useRef<HTMLDivElement | null>(null);
@@ -60,52 +67,6 @@ const LandingBanner = () => {
     };
   }, []);
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      filter: "blur(10px)",
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94] as const,
-      },
-    },
-  };
-
-  const logoVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.5,
-      rotate: -180,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 1,
-        ease: [0.25, 0.46, 0.45, 0.94] as const,
-      },
-    },
-  };
-
   const titleVariants = {
     hidden: {
       opacity: 0,
@@ -123,47 +84,6 @@ const LandingBanner = () => {
     },
   };
 
-  const buttonVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94] as const,
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut" as const,
-      },
-    },
-    tap: {
-      scale: 0.95,
-      transition: {
-        duration: 0.1,
-      },
-    },
-  };
-
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-        ease: "easeOut" as const,
-      },
-    },
-  };
-
   return (
     <section
       ref={sectionRef}
@@ -174,12 +94,6 @@ const LandingBanner = () => {
         className="absolute inset-0 w-full h-[120%] -z-20"
         style={{
           willChange: "transform",
-        }}
-        initial={{ scale: 1.1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{
-          duration: 2,
-          ease: [0.25, 0.46, 0.45, 0.94] as const,
         }}
       >
         <Image
@@ -197,7 +111,7 @@ const LandingBanner = () => {
       {/* Overlay */}
       <motion.div
         className="absolute inset-0 bg-black/70 -z-10"
-        variants={overlayVariants}
+        // variants={overlayImageVariants}
         initial="hidden"
         animate="visible"
       />
@@ -264,7 +178,9 @@ const LandingBanner = () => {
 
         <motion.button
           className="px-6 py-4 rounded-full self-center md:self-start flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer"
-          variants={buttonVariants}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2, ease: "easeInOut" }}
           whileHover="hover"
           whileTap="tap"
         >

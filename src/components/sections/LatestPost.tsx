@@ -26,7 +26,7 @@ const LatestPost = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-accent/70 to-blue-50 overflow-hidden">
+    <section className="bg-gradient-to-b to-accent/70 from-blue-50 overflow-hidden">
       <div className="max-w-7xl mx-auto py-24 w-full px-4">
         {/* Header Section with Motion Animation */}
         <motion.div

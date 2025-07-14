@@ -1,106 +1,3 @@
-// import { CheckCircle } from "lucide-react";
-// import Image from "next/image";
-// import React from "react";
-// import new_logo from "@/images/new_small_logo.png";
-
-// const WhyUs = () => {
-//   return (
-//     <section className="bg-blue-50">
-//       <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
-//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-//           <div className="w-full aspect-square relative overflow-hidden rounded-2xl flex justify-start items-center">
-//             <div className="bg-blue-800 w-11/12 aspect-square rounded-full"></div>
-
-//             <div className="bg-blue-50 p-1 absolute w-5/12 bottom-0 right-0 aspect-square rounded-full">
-//               <div className="bg-gray-400 w-full h-full rounded-full"></div>
-//             </div>
-//           </div>
-
-//           <div className="bg-blue-50/50 px-2 py-10 overflow-hidden aspect-square rounded-xl">
-//             <div className="flex items-center gap-4 w-full">
-//               <Image src={new_logo} alt="logo" className="size-6" />
-//               <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
-//                 Why Choose Us
-//               </h3>
-//             </div>
-
-//             <div className="h-full mt-4 flex flex-col">
-//               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-//                 Why we stand out together
-//               </h1>
-//               <p className="mt-4 xl:mt-6 text-muted-foreground text-sm lg:text-base">
-//                 Our dedication, transparency, and community-driven approach set
-//                 us apart. partnering with us,programs that create meaningful
-//                 change.
-//               </p>
-
-//               <div className="flex mt-16 flex-col">
-//                 <div className="flex gap-6 font-semibold flex-col lg:flex-row">
-//                   <div className="flex items-center gap-2">
-//                     <div className="relative">
-//                       <CheckCircle className="size-10" />
-//                       <div className="absolute left-1/2 -translate-x-1/2 -bottom-1 bg-primary/60 w-7 rounded-full aspect-square " />
-//                     </div>
-//                     <span className="ml-2">Community-Centered Approach</span>
-//                   </div>
-//                   <div className="flex items-center gap-2">
-//                     <div className="relative">
-//                       <CheckCircle className="size-10" />
-//                       <div className="absolute left-1/2 -translate-x-1/2 -bottom-1 bg-primary/60 w-7 rounded-full aspect-square " />
-//                     </div>
-//                     <span className="ml-2">
-//                       Transparency and Accountability
-//                     </span>
-//                   </div>
-//                 </div>
-//                 <div className="flex gap-6 font-semibold mt-8">
-//                   <div className="flex items-center gap-2">
-//                     <div className="relative">
-//                       <CheckCircle className="size-10" />
-//                       <div className="absolute left-1/2 -translate-x-1/2 -bottom-1 bg-primary/60 w-7 rounded-full aspect-square " />
-//                     </div>
-//                     <span className="ml-2">Community-Centered Approach</span>
-//                   </div>
-//                   <div className="flex items-center gap-2">
-//                     <div className="relative">
-//                       <CheckCircle className="size-10" />
-//                       <div className="absolute left-1/2 -translate-x-1/2 -bottom-1 bg-primary/60 w-7 rounded-full aspect-square " />
-//                     </div>
-//                     <span className="ml-2">Volunteer and Donor Engagement</span>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               <div className="flex justify-between mt-16">
-//                 <div className="flex flex-col items-center border-r pr-8">
-//                   <h1 className="font-extrabold text-5xl mb-3 text-primary">
-//                     11+
-//                   </h1>
-//                   <h2 className="font-semibold">Years of Experience</h2>
-//                 </div>
-//                 <div className="flex flex-col items-center border-r pr-8">
-//                   <h1 className="font-extrabold text-5xl mb-3 text-primary">
-//                     40+
-//                   </h1>
-//                   <h2 className="font-semibold"> Volunteers</h2>
-//                 </div>
-//                 <div className="flex flex-col items-center">
-//                   <h1 className="font-extrabold text-5xl mb-3 text-primary">
-//                     8+
-//                   </h1>
-//                   <h2 className="font-semibold">Country Wide Office</h2>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default WhyUs;
-
 "use client";
 
 import { CheckCircle } from "lucide-react";
@@ -108,6 +5,8 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
 import new_logo from "@/images/new_small_logo.png";
+import image_1 from "@/images/lycbo-office.jpg";
+import image_2 from "@/images/lycbo-img1.jpg";
 import { containerVariants, itemVariants } from "@/lib/constants";
 
 const WhyUs = () => {
@@ -185,16 +84,25 @@ const WhyUs = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.div
-              className="bg-blue-800 w-11/12 aspect-square rounded-full"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
+              className="bg-blue-800 w-11/12 relative group aspect-square rounded-full overflow-hidden"
+              initial={{ opacity: 0, filter: "blur(8px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }}
               transition={{
                 duration: 1.2,
                 ease: "easeOut",
                 delay: 0.2,
               }}
               viewport={{ once: true }}
-            />
+            >
+              <Image
+                src={image_1}
+                alt="Lycbo Office"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="shine-effect" />
+              </div>
+            </motion.div>
 
             <motion.div
               className="bg-blue-50 p-1 absolute w-5/12 bottom-0 right-0 aspect-square rounded-full"
@@ -208,21 +116,30 @@ const WhyUs = () => {
               viewport={{ once: true }}
             >
               <motion.div
-                className="bg-gray-400 w-full h-full rounded-full"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
+                className="bg-gray-400 relative group overflow-hidden w-full h-full rounded-full"
+                initial={{ opacity: 0, filter: "blur(8px)" }}
+                whileInView={{ opacity: 1, filter: "blur(0px)" }}
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
                   delay: 1.2,
                 }}
                 viewport={{ once: true }}
-              />
+              >
+                <Image
+                  src={image_2}
+                  alt="Lycbo Office"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="shine-effect" />
+                </div>
+              </motion.div>
             </motion.div>
           </motion.div>
 
           <motion.div
-            className="bg-blue-50/50 px-2 py-10 overflow-hidden aspect-square rounded-xl"
+            className="bg-blue-50/50 px-2 py-10 overflow-hidden lg:aspect-square rounded-xl"
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
@@ -350,22 +267,20 @@ const WhyUs = () => {
               </motion.div>
 
               <motion.div
-                className="flex justify-between mt-16"
+                className="grid grid-cols-2 gap-8 md:grid-cols-3 mt-16"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
               >
                 {[
-                  { number: "11+", label: "Years of Experience" },
-                  { number: "40+", label: "Volunteers" },
-                  { number: "8+", label: "Country Wide Office" },
+                  { number: "10+", label: "Years of Experience" },
+                  { number: "20+", label: "Volunteers" },
+                  { number: "7+", label: "County Wide Office" },
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
-                    className={`flex flex-col items-center ${
-                      index < 2 ? "border-r pr-8" : ""
-                    }`}
+                    className={`flex flex-col items-center justify-center `}
                     variants={countUpVariants}
                     whileHover={{
                       y: -5,
@@ -391,7 +306,7 @@ const WhyUs = () => {
                       {stat.number}
                     </motion.h1>
                     <motion.h2
-                      className="font-semibold"
+                      className="font-semibold text-sm"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{
