@@ -279,7 +279,7 @@ const WhatWeDo = () => {
           >
             <motion.div
               variants={imageVariants}
-              className="lg:w-4/6 w-10/12 ml-auto bg-blue-800 rounded-2xl overflow-hidden lg:h-[650px] h-[500px]"
+              className="lg:w-4/6 w-10/12 group relative ml-auto bg-blue-800 rounded-2xl overflow-hidden lg:h-[650px] h-[500px]"
             >
               <motion.div className="w-full h-full">
                 <Image
@@ -288,6 +288,9 @@ const WhatWeDo = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="shine-effect" />
+              </div>
             </motion.div>
 
             <motion.div
@@ -295,12 +298,15 @@ const WhatWeDo = () => {
               animate={floatingAnimation}
               className="absolute lg:w-[280px] w-[150px] bg-blue-50 aspect-square rounded-full bottom-12 lg:left-10 -left-2 p-1.5 overflow-hidden"
             >
-              <motion.div className="bg-slate-700 h-full w-full rounded-full">
+              <motion.div className="bg-slate-700 relative group h-full w-full rounded-full">
                 <Image
                   src={whatwedo2}
                   alt="what-we-do"
                   className="w-full h-full rounded-full object-cover"
                 />
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="shine-effect" />
+                </div>
               </motion.div>
             </motion.div>
 

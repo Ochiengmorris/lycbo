@@ -174,18 +174,18 @@ const Services = () => {
               <Card className="p-12 gap-2 bg-card/50 rounded-2xl border-none">
                 <motion.h2
                   className="font-bold text-xl text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
+                  // initial={{ opacity: 0, y: 20 }}
+                  // whileInView={{ opacity: 1, y: 0 }}
+                  // transition={{ delay: index * 0.1 + 0.3 }}
                   viewport={{ once: true }}
                 >
                   {item.title}
                 </motion.h2>
                 <motion.p
                   className="text-muted-foreground text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.4 }}
+                  // initial={{ opacity: 0, y: 20 }}
+                  // whileInView={{ opacity: 1, y: 0 }}
+                  // transition={{ delay: index * 0.1 + 0.4 }}
                   viewport={{ once: true }}
                 >
                   Addressing hunger and maluntrition by providing nutritious
@@ -194,9 +194,9 @@ const Services = () => {
 
                 <motion.div
                   className="bg-accent relative w-4/6 mx-auto rounded-full aspect-square overflow-hidden group mt-4"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
+                  // initial={{ opacity: 0, scale: 0.8 }}
+                  // whileInView={{ opacity: 1, scale: 1 }}
+                  // transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
                   viewport={{ once: true }}
                   whileHover="hover"
                 >

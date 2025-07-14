@@ -12,13 +12,13 @@ export const containerVariants = {
 export const itemVariants = {
   hidden: {
     opacity: 0,
-    y: 30,
-    filter: "blur(8px)",
+    y: 10,
+    // filter: "blur(8px)",
   },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
+    // filter: "blur(0px)",
     transition: {
       duration: 0.8,
       ease: [0.25, 0.46, 0.45, 0.94] as const,
@@ -29,13 +29,9 @@ export const itemVariants = {
 export const imageVariants = {
   hidden: {
     opacity: 0,
-    scale: 0.8,
-    rotate: -5,
   },
   visible: {
     opacity: 1,
-    scale: 1,
-    rotate: 0,
     transition: {
       duration: 1.2,
       ease: [0.25, 0.46, 0.45, 0.94] as const,
@@ -107,21 +103,8 @@ export const buttonVariants = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: 2,
       ease: [0.25, 0.46, 0.45, 0.94] as const,
-    },
-  },
-  hover: {
-    scale: 1.05,
-    transition: {
-      duration: 0.2,
-      ease: "easeInOut" as const,
-    },
-  },
-  tap: {
-    scale: 0.95,
-    transition: {
-      duration: 0.1,
     },
   },
 };

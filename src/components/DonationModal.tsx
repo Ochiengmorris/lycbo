@@ -27,7 +27,7 @@ const DonationModal = () => {
           <button
             key={amt}
             onClick={() => setAmount(amt)}
-            className={`px-4 py-4 rounded-lg ${
+            className={`px-4 py-4 text-sm md:text-base rounded-lg ${
               amount === amt
                 ? "bg-primary text-white"
                 : "bg-gray-200 text-gray-700"
@@ -48,7 +48,7 @@ const DonationModal = () => {
             alert("Please enter a valid amount.");
           }
         }}
-        className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 text-lg text-white cursor-pointer z-10"
+        className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 md:text-lg text-white cursor-pointer z-10"
       >
         Donate KES {amount ? amount.toLocaleString() : "0"}
       </button>

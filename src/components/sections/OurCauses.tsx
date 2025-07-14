@@ -88,20 +88,17 @@ const OurCauses = () => {
           {[1, 2, 3].map((cardIndex) => (
             <motion.div key={cardIndex} variants={cardVariants}>
               <Card className="p-4 border group rounded-xl bg-card/50 gap-0 border-none z-10">
-                <motion.div
-                  className="relative w-full aspect-square rounded-2xl overflow-hidden"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
                   <Image
                     src={whatwedo1}
                     alt="what-we-do"
-                    className="w-full h-full group-hover:scale-105 transition duration-300 object-cover"
+                    className="w-full h-full transition duration-300 object-cover"
+                    priority
                   />
                   <div className="absolute inset-0 pointer-events-none">
                     <div className="shine-effect" />
                   </div>
-                </motion.div>
+                </div>
 
                 <motion.h2
                   className="text-center mt-4 font-semibold text-lg lg:text-2xl"

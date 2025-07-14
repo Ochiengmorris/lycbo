@@ -1,118 +1,3 @@
-// import { GraduationCap, HeartPulse, ShoppingBag } from "lucide-react";
-// import Image from "next/image";
-// import React from "react";
-// import new_logo from "@/images/new_small_logo.png";
-// import whatwedo2 from "@/images/what-we-do-image-2.jpg";
-
-// const OurImpact = () => {
-//   return (
-//     <section className="bg-gradient-to-b from-accent/70 to-blue-50">
-//       <div className="max-w-7xl mx-auto py-24 w-full px-4 lg:px-0">
-//         <div className="flex items-center flex-col">
-//           <div className="flex items-center gap-4">
-//             <Image src={new_logo} alt="logo" className="size-6" />
-//             <h3 className="uppercase shrink-0 text-md lg:text-xl font-mono tracking-wide">
-//               OUR IMPACT
-//             </h3>
-//           </div>
-
-//           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-//             Highlights our impactful work
-//           </h1>
-//           <p className="text-muted-foreground mt-8 text-center text-sm lg:text-base">
-//             Discover the positive change we’ve created through our programs,
-//             partnerships, and dedicated efforts. <br /> From healthcare and
-//             education to environmental sustainability.
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 lg:grid-cols-3 lg:px-16 mt-20 gap-12">
-//           <div>
-//             <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
-//               <Image
-//                 src={whatwedo2}
-//                 alt="image"
-//                 className="object-cover w-full h-full"
-//                 priority
-//               />
-//             </div>
-//             <div className="mt-10 flex justify-between gap-4">
-//               <div>
-//                 <h1 className="text-3xl lg:text-5xl font-bold text-primary mb-4">
-//                   96%
-//                 </h1>
-//                 <h2 className="font-semibold text-xl ">Healthcare Support</h2>
-//                 <p className="text-muted-foreground mt-2 text-sm lg:text-base">
-//                   Providing essential healthcare services and resources to
-//                   communities.
-//                 </p>
-//               </div>
-//               <div className="relative">
-//                 <HeartPulse className="size-16" />
-//                 <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-primary/60 w-10 rounded-full aspect-square " />
-//               </div>
-//             </div>
-//           </div>
-//           <div>
-//             <div className="mb-10 flex justify-between gap-4">
-//               <div>
-//                 <h1 className="text-3xl lg:text-5xl font-bold text-primary mb-4">
-//                   94%
-//                 </h1>
-//                 <h2 className="font-semibold text-xl ">Education Support</h2>
-//                 <p className="text-muted-foreground mt-2 text-sm lg:text-base">
-//                   Providing essential Education services and resources to
-//                   communities.
-//                 </p>
-//               </div>
-//               <div className="relative">
-//                 <GraduationCap className="size-16" />
-//                 <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-primary/60 w-10 rounded-full aspect-square " />
-//               </div>
-//             </div>
-//             <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
-//               <Image
-//                 src={whatwedo2}
-//                 alt="image"
-//                 className="object-cover w-full h-full"
-//                 priority
-//               />
-//             </div>
-//           </div>
-//           <div>
-//             <div className="aspect-square overflow-hidden flex flex-col relative rounded-xl">
-//               <Image
-//                 src={whatwedo2}
-//                 alt="image"
-//                 className="object-cover w-full h-full"
-//                 priority
-//               />
-//             </div>
-//             <div className="mt-10 flex justify-between gap-4">
-//               <div>
-//                 <h1 className="text-3xl lg:text-5xl font-bold text-primary mb-4">
-//                   95%
-//                 </h1>
-//                 <h2 className="font-semibold text-xl ">Food Support</h2>
-//                 <p className="text-muted-foreground mt-2 text-sm lg:text-base">
-//                   Providing essential Food services and resources to
-//                   communities.
-//                 </p>
-//               </div>
-//               <div className="relative">
-//                 <ShoppingBag className="size-16" />
-//                 <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-primary/60 w-10 rounded-full aspect-square " />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default OurImpact;
-
 "use client";
 
 import { GraduationCap, HeartPulse, ShoppingBag } from "lucide-react";
@@ -334,29 +219,21 @@ const OurImpact = () => {
               )}
 
               <motion.div
-                className="aspect-square overflow-hidden flex flex-col relative rounded-xl"
+                className="aspect-square group overflow-hidden flex flex-col relative rounded-xl"
                 variants={imageVariants}
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.3 },
-                }}
               >
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                >
+                <div>
                   <Image
                     src={item.image}
                     alt="impact image"
                     className="object-cover w-full h-full"
                     priority
                   />
-                </motion.div>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                />
+                </div>
+                <motion.div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="shine-effect" />
+                </div>
               </motion.div>
 
               {item.position === "bottom" && (

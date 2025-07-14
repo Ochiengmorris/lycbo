@@ -180,7 +180,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -95%;
+  left: -150%;
   width: 50%;
   height: 100%;
   background: linear-gradient(
@@ -193,15 +193,15 @@
 }
 
 .group:hover .shine-effect::before {
-  animation: shine 0.7s ease-in-out forwards;
+  animation: shine 1s ease-in-out forwards;
 }
 
 @keyframes shine {
   0% {
-    left: -95%;
+    left: -150%;
   }
   100% {
-    left: 145%;
+    left: 180%;
   }
 }
 

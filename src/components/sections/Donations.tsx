@@ -63,7 +63,7 @@ const DonationSection = () => {
 
   const pulseVariants = {
     animate: {
-      scale: [1, 1.05, 1],
+      scale: [1, 1.02, 1],
       transition: {
         duration: 2,
         repeat: Infinity,
@@ -91,7 +91,7 @@ const DonationSection = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      variants={backgroundVariants}
+      // variants={backgroundVariants}
       animate="animate"
     >
       {/* Background overlay with subtle animation */}
