@@ -10,37 +10,41 @@ import OurCauses from "@/components/sections/OurCauses";
 import AboutUs from "@/components/sections/AboutUs";
 import DonationSection from "@/components/sections/Donations";
 import Partners from "@/components/sections/Partners";
+import HeaderInfo from "@/components/HeaderInfo";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <div className="absolute inset-0">
-        <HeaderNav />
-      </div>
-      <LandingBanner />
-
-      <AboutUs />
-
-      <Services />
-
-      <WhatWeDo />
-
-      <OurCauses />
-
-      <WhyUs />
-
-      <OurImpact />
-
-      <div className="bg-blue-50 pb-20">
-        <div className="w-full">
-          <InfinteTextSlider />
+    <>
+      <HeaderInfo />
+      <div className="relative">
+        <div className="absolute inset-0">
+          <HeaderNav />
         </div>
+        <LandingBanner />
+
+        <AboutUs />
+
+        <Services />
+
+        <WhatWeDo />
+
+        <OurCauses />
+
+        <WhyUs />
+
+        <OurImpact />
+
+        <div className="bg-blue-50 pb-20">
+          <div className="w-full">
+            <InfinteTextSlider />
+          </div>
+        </div>
+
+        <DonationSection />
+
+        <LatestPost />
+        <Partners />
       </div>
-
-      <DonationSection />
-
-      <LatestPost />
-      <Partners />
-    </div>
+    </>
   );
 }

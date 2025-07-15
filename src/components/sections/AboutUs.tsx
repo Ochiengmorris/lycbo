@@ -133,7 +133,7 @@ const AboutUs = () => {
                 </motion.span>
                 <br />
                 <motion.span
-                  className="text-primary"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -144,7 +144,7 @@ const AboutUs = () => {
                 <span className="mx-4">and</span>
                 <br />
                 <motion.span
-                  className="text-primary"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -188,7 +188,7 @@ const AboutUs = () => {
                   </motion.div>
 
                   <motion.button
-                    className="px-6 py-4 mt-4 rounded-full flex items-center gap-2 group font-semibold transition duration-300 w-fit text-sm lg:text-base bg-primary hover:bg-blue-800 text-white cursor-pointer z-10"
+                    className="px-6 py-4 mt-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center gap-2 group font-semibold transition duration-300 w-fit text-sm lg:text-base hover:bg-blue-800 text-white cursor-pointer z-10"
                     variants={buttonVariants}
                     whileHover="hover"
                     whileTap="tap"

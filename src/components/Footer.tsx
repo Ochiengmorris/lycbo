@@ -1,23 +1,28 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import logo from "@/images/lycbo-logo.png";
 import FacebookIcon from "@/images/icons/Facebook";
 import InstagramIcon from "@/images/icons/InstagramIcon";
 import XIcon from "@/images/icons/XIcon";
+import { Mail } from "lucide-react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
   return (
-    <div className="bg-gradient-to-b from-accent to-accent">
+    <div className="bg-accent">
       <div className="max-w-7xl mx-auto pt-24 pb-8 w-full px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="border-r border-muted-foreground/20 pr-8">
             <Link href="/" className="flex items-center gap-2 group">
               <Image src={logo} alt="LYCBO Logo" className="size-20" priority />
-              <span className="text-3xl font-black text-primary">LYCBO.</span>
+              <span className="text-3xl font-black text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
+                LYCBO.
+              </span>
             </Link>
 
-            <p className="text-muted-foreground mt-4 text-sm lg:text-base">
+            <p className="text-muted-foreground mt-4 text-xs md:text-sm lg:text-base">
               LYCBO is a non-profit organization dedicated to improving the
               lives of children and families in need. Through our various
               programs and initiatives, we strive to create lasting change and
@@ -25,14 +30,14 @@ const Footer = () => {
             </p>
             <div className="flex items-center mt-6 justify-start gap-0">
               <div className="flex-1">
-                <h2>Customer care</h2>
-                <p className="text-muted-foreground mt-2 font-semibold">
-                  +254 700 000 000
+                <h2>Call Us</h2>
+                <p className="text-muted-foreground mt-2 font-semibold text-sm lg:text-base">
+                  +254 703 733 835
                 </p>
               </div>
               <div className="flex-1">
                 <h2>Need live support</h2>
-                <p className="text-muted-foreground mt-2 font-semibold">
+                <p className=" text-sm lg:text-base text-muted-foreground mt-2 font-semibold">
                   info@lycbo.org
                 </p>
               </div>
@@ -56,12 +61,17 @@ const Footer = () => {
 
           <div className="lg:pl-8 mt-8 lg:mt-0">
             <div className="flex items-center gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full p-3 rounded-lg border border-muted-foreground/20 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button className="bg-primary text-white font-semibold md:px-6 py-3 px-4 rounded-lg text-sm md:text-base  hover:bg-primary/90 transition-colors">
+              <div className="relative grow">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3 pl-12 border rounded-2xl focus:ring-2 focus:outline-none  focus:ring-blue-500 transition-all text-xs md:text-sm lg:text-base"
+                  placeholder="your.email@example.com"
+                />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              </div>
+              <button className="group flex items-center gap-2 px-4 py-2 text-sm lg:text-base lg:px-8 lg:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer">
                 Subscribe
               </button>
             </div>
@@ -69,7 +79,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 mt-8">
               <div>
                 <h2 className="font-bold">Quick Links</h2>
-                <ul className="mt-2 space-y-4 text-sm lg:text-base">
+                <ul className="mt-2 space-y-4 text-xs md:text-sm lg:text-base">
                   <li>
                     <Link
                       href="/"
@@ -106,7 +116,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="font-bold">Useful Links</h2>
-                <ul className="mt-2 space-y-4 text-sm lg:text-base">
+                <ul className="mt-2 space-y-4 text-xs md:text-sm lg:text-base">
                   <li>
                     <Link
                       href="/"
@@ -146,7 +156,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full py-6 bg-white/20 text-center text-sm lg:text-base text-muted-foreground">
+      <div className="w-full py-6 bg-white/20 text-center text-xs md:text-sm lg:text-base text-muted-foreground">
         Copyright © 2025 | LYCBO All Rights Reserved.
       </div>
     </div>

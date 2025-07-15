@@ -6,13 +6,7 @@ import { motion } from "framer-motion";
 import bannerImage from "@/images/staff-lycbo.jpg";
 import new_logo from "@/images/new_small_logo.png";
 import { ArrowRightCircle } from "lucide-react";
-import {
-  buttonVariants,
-  containerVariants,
-  itemVariants,
-  logoVariants,
-  overlayImageVariants,
-} from "@/lib/constants";
+import { containerVariants, itemVariants, logoVariants } from "@/lib/constants";
 
 const LandingBanner = () => {
   const imageRef = useRef<HTMLDivElement | null>(null);
@@ -124,14 +118,14 @@ const LandingBanner = () => {
         animate="visible"
       >
         <motion.div
-          className="flex items-center gap-4 mb-4 justify-center md:justify-start"
+          className="flex items-center gap-4 mb-4 mt-4 justify-center md:justify-start"
           variants={itemVariants}
         >
           <motion.div variants={logoVariants}>
             <Image src={new_logo} alt="logo" className="size-6" />
           </motion.div>
           <motion.h3
-            className="uppercase tracking-wider"
+            className="uppercase tracking-wider text-sm lg:text-base "
             variants={itemVariants}
           >
             Welcome to our Organization
@@ -151,9 +145,9 @@ const LandingBanner = () => {
           </motion.span>
           <br />
           <motion.span
-            className="text-primary"
-            initial={{ opacity: 0, y: 20, color: "#ffffff" }}
-            animate={{ opacity: 1, y: 0, color: "#6366f1" }}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
             Empowering
@@ -177,7 +171,7 @@ const LandingBanner = () => {
         </motion.p>
 
         <motion.button
-          className="px-6 py-4 rounded-full self-center md:self-start flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer"
+          className="px-6 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 self-center md:self-start flex items-center gap-2 group font-semibold transition duration-300 w-fit hover:bg-blue-800 text-white cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2, ease: "easeInOut" }}

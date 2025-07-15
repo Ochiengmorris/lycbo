@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Fredoka, Fira_Code } from "next/font/google";
 import "./globals.css";
-import HeaderInfo from "@/components/HeaderInfo";
 import Footer from "@/components/Footer";
 
 const FredokaFont = Fredoka({
@@ -39,7 +38,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${FiraCode.variable} ${FredokaFont.variable} antialiased`}
       >
         <div className="flex flex-col min-h-screen">
-          <HeaderInfo />
           <main className="flex-1">{children}</main>
           <Footer />
         </div>

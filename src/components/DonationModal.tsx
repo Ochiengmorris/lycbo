@@ -48,7 +48,7 @@ const DonationModal = () => {
             alert("Please enter a valid amount.");
           }
         }}
-        className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 md:text-lg text-white cursor-pointer z-10"
+        className="rounded-full bg-gradient-to-r from-primary to-purple-600 flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary md:text-lg text-white cursor-pointer z-10"
       >
         Donate KES {amount ? amount.toLocaleString() : "0"}
       </button>

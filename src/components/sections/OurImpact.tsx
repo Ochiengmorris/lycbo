@@ -5,7 +5,9 @@ import Image from "next/image";
 import React from "react";
 import { motion, useInView } from "motion/react";
 import new_logo from "@/images/new_small_logo.png";
-import whatwedo2 from "@/images/what-we-do-image-2.jpg";
+import whatwedo2 from "@/images/staff3-lycbo.jpg";
+import whatwedo3 from "@/images/ibra-lycbo.jpg";
+import whatwedo4 from "@/images/staff2-lycbo.jpg";
 import {
   containerVariants,
   imageVariants,
@@ -81,7 +83,7 @@ const OurImpact = () => {
 
   const impactData = [
     {
-      image: whatwedo2,
+      image: whatwedo3,
       percentage: "96",
       title: "Healthcare Support",
       description:
@@ -99,7 +101,7 @@ const OurImpact = () => {
       position: "top",
     },
     {
-      image: whatwedo2,
+      image: whatwedo4,
       percentage: "95",
       title: "Food Support",
       description:
@@ -152,7 +154,7 @@ const OurImpact = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-3 lg:px-16 mt-20 gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-16 mt-20 gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -222,15 +224,14 @@ const OurImpact = () => {
                 className="aspect-square group overflow-hidden flex flex-col relative rounded-xl"
                 variants={imageVariants}
               >
-                <div>
-                  <Image
-                    src={item.image}
-                    alt="impact image"
-                    className="object-cover w-full h-full"
-                    priority
-                  />
-                </div>
-                <motion.div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                <Image
+                  src={item.image}
+                  alt="impact image"
+                  className="object-cover w-full h-full"
+                  priority
+                />
+
+                <div className="absolute inset-0 bg-black/20 to-transparent" />
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="shine-effect" />
                 </div>

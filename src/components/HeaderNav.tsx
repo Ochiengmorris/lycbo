@@ -75,7 +75,7 @@ const HeaderNav: React.FC = () => {
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image src={logo} alt="LYCBO Logo" className="size-10" priority />
-            <span className="md:text-3xl text-2xl font-black text-primary">
+            <span className=" md:text-3xl text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               LYCBO.
             </span>
           </Link>
@@ -96,7 +96,7 @@ const HeaderNav: React.FC = () => {
 
           {/* CTA Button */}
           <Button
-            className="rounded-full hidden lg:flex font-semibold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300"
+            className="rounded-full hidden lg:flex font-semibold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600"
             asChild
           >
             <Link href="/donate">Donate Now</Link>
@@ -179,7 +179,7 @@ const HeaderNav: React.FC = () => {
               style={{ transitionDelay: `${NAV_LINKS.length * 50}ms` }}
             >
               <Button
-                className="w-full rounded-full font-semibold py-3 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                className="w-full rounded-full font-semibold py-3 shadow-md bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 asChild
               >
                 <Link href="/donate" onClick={toggleMobileMenu}>

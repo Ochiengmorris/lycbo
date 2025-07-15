@@ -139,7 +139,7 @@ const WhyUs = () => {
           </motion.div>
 
           <motion.div
-            className="bg-blue-50/50 px-2 py-10 overflow-hidden lg:aspect-square rounded-xl"
+            className="bg-blue-50/50 px-2 py-10 overflow-hidden xl:aspect-square rounded-xl"
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
