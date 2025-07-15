@@ -120,7 +120,7 @@ const OurCauses = () => {
                   Ensuring education and resouces for undeserved communities.
                 </motion.p>
 
-                <motion.button className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary bg-primary/90 lg:text-lg text-white cursor-pointer z-10">
+                <motion.button className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 w-full hover:bg-primary lg:text-lg text-white cursor-pointer z-10">
                   Donate Now
                 </motion.button>
               </Card>

@@ -213,7 +213,7 @@ const WhatWeDo = () => {
                   backgroundColor: "#1e40af",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-6 py-4 -rotate-90 rounded-2xl flex items-center gap-2 group font-semibold transition duration-300 w-fit bg-primary hover:bg-blue-800 text-white cursor-pointer z-10"
+                className="px-6 py-4 -rotate-90 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center gap-2 group font-semibold transition duration-300 w-fit hover:bg-blue-800 text-white cursor-pointer z-10"
               >
                 <motion.div
                   animate={{ rotate: [0, 360] }}

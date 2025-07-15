@@ -13,6 +13,7 @@ import {
   itemVariants,
   logoVariants,
 } from "@/lib/constants";
+import Link from "next/link";
 
 const LatestPost = () => {
   const arrowVariants = {
@@ -132,17 +133,15 @@ const LatestPost = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 + index * 0.1 }}
               >
-                <motion.button
+                <Link
                   className="rounded-full flex items-center gap-1 group font-bold transition duration-300 w-fit hover:text-gray-700 tracking-tight text-primary cursor-pointer z-10"
-                  variants={buttonVariants}
-                  whileHover="hover"
-                  whileTap="tap"
+                  href={`/blog/${item.title.split(" ")[0]}`}
                 >
                   Read More
                   <motion.div variants={arrowVariants}>
                     <LucideArrowRightCircle className="size-5" />
                   </motion.div>
-                </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
           ))}

@@ -12,7 +12,7 @@ const DonationPage = () => {
       <div className="absolute inset-0">
         <HeaderNav />
       </div>
-      <div className="pt-16 pb-8 bg-gray-950 h-[480px]">
+      <div className="pt-16 pb-8 bg-gray-950 h-[520px]">
         <div className="max-w-7xl mx-auto h-full px-4 flex flex-col justify-center text-white space-y-2">
           <h1 className="text-7xl font-bold">Donation</h1>
           <h3 className="font-semibold flex items-center text-lg">
