@@ -72,17 +72,6 @@ const DonationSection = () => {
     },
   };
 
-  const backgroundVariants = {
-    animate: {
-      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-      transition: {
-        duration: 20,
-        repeat: Infinity,
-        ease: [0.0, 0.0, 1.0, 1.0] as const, // linear
-      },
-    },
-  };
-
   return (
     <motion.section
       className="bg-accent/70 relative overflow-hidden"

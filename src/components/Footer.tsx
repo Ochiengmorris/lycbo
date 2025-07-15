@@ -8,7 +8,7 @@ import XIcon from "@/images/icons/XIcon";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-b from-accent to-accent">
+    <div className="bg-accent">
       <div className="max-w-7xl mx-auto pt-24 pb-8 w-full px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="border-r border-muted-foreground/20 pr-8">
