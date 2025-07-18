@@ -3,6 +3,7 @@
 import HeaderNav from "@/components/HeaderNav";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import image1 from "@/images/what-we-do-image-1.jpg";
 import {
   CalendarDays,
   DotIcon,
@@ -13,6 +14,7 @@ import {
   Tags,
   User,
 } from "lucide-react";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const BlogPage = () => {
@@ -51,9 +53,9 @@ const BlogPage = () => {
       </div>
       <div className="pt-16 pb-8 bg-gray-950 h-[400px] lg:h-[520px]">
         <div className="max-w-7xl mx-auto h-full px-4 flex flex-col justify-center text-white space-y-2">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 lg:mb-6 w-fit">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full p-2 md:px-4 md:py-2 lg:mb-6 w-fit">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm">Featured Article</span>
+            <span className="text-xs md:text-sm">Featured Article</span>
           </div>
           <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold">
             Empowering Communities through Education and Health
@@ -77,7 +79,14 @@ const BlogPage = () => {
 
       <div className="bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 py-24 ">
-          <div className="h-[270px] lg:h-[650px] bg-violet-950 rounded-4xl"></div>
+          <div className="h-[270px] lg:h-[650px] bg-violet-950 rounded-4xl overflow-hidden relative">
+            <Image
+              src={image1}
+              alt="blog picture"
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
 
           <div className="lg:px-16 py-8 px-4 z-20 prose prose-lg max-w-none">
             <p className="leading-relaxed text-gray-700 lg:text-lg">
@@ -221,7 +230,7 @@ const BlogPage = () => {
 
                 <button
                   onClick={handleSubmit}
-                  className="group flex items-center gap-2 px-4 py-2 text-sm lg:text-base lg:px-8 lg:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 z-10 cursor-pointer"
+                  className="group flex items-center gap-2 px-4 py-2 text-sm lg:text-base lg:px-8 lg:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 z-10 cursor-pointer"
                 >
                   <Send className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                   Post Comment

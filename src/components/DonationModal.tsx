@@ -6,7 +6,7 @@ const DonationModal = () => {
   const [amount, setAmount] = React.useState<number | null>(null);
   return (
     <div className="mt-4 z-50">
-      <div className="border border-gray-300 rounded-md relative">
+      <div className="border border-gray-300 rounded-2xl relative">
         <input
           type="number"
           name="amount"
@@ -27,7 +27,7 @@ const DonationModal = () => {
           <button
             key={amt}
             onClick={() => setAmount(amt)}
-            className={`px-4 py-4 text-sm md:text-base rounded-lg ${
+            className={`px-4 py-4 text-sm md:text-base rounded-2xl ${
               amount === amt
                 ? "bg-primary text-white"
                 : "bg-gray-200 text-gray-700"

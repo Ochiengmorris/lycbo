@@ -1,5 +1,6 @@
 "use client";
 
+import { Mail, User } from "lucide-react";
 import React, { useState } from "react";
 
 const Donationmodal2 = () => {
@@ -12,7 +13,7 @@ const Donationmodal2 = () => {
 
   return (
     <div className="mt-4">
-      <div className="border border-gray-300 rounded-md relative">
+      <div className="border border-gray-300 rounded-2xl relative">
         <input
           type="number"
           name="amount"
@@ -52,43 +53,52 @@ const Donationmodal2 = () => {
             <span className="font-semibold mb-2 text-sm md:text-base">
               First Name
             </span>
-            <input
-              type="text"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              placeholder="John"
-              className="w-full p-2 lg:p-4 border rounded-md focus:outline-none focus:ring-2 font-medium focus:ring-blue-500 lg:text-lg"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="John"
+                className="w-full px-4 py-3 pl-12 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all text-xs md:text-sm lg:text-base"
+              />
+              <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            </div>
           </div>
           <div className="flex flex-col">
             <span className="font-semibold mb-2  text-sm md:text-base">
               Last Name
             </span>
-            <input
-              type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              placeholder="Doe"
-              className="w-full p-2 lg:p-4 border rounded-md focus:outline-none focus:ring-2 font-medium focus:ring-blue-500 lg:text-lg"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder="Doe"
+                className="w-full px-4 py-3 pl-12 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all text-xs md:text-sm lg:text-base"
+              />
+              <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            </div>
           </div>
         </div>
         <div className="flex flex-col mt-4">
           <span className="font-semibold mb-2  text-sm md:text-base">
             Email
           </span>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="example@gmail.com"
-            className="w-full p-2 lg:p-4 border rounded-md focus:outline-none focus:ring-2 font-medium focus:ring-blue-500 lg:text-lg"
-          />
+          <div className="relative">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="example@gmail.com"
+              className="w-full px-4 py-3 pl-12 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all text-xs md:text-sm lg:text-base"
+            />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          </div>
         </div>
 
         <button
           onClick={handleSubmit}
-          className="rounded-full flex justify-center mt-8 py-3 lg:py-4 items-center gap-2 group font-semibold transition duration-300 px-8 hover:bg-primary bg-primary/90 md:text-lg text-white cursor-pointer z-10 text-sm"
+          className="group flex items-center gap-2 px-4 py-2 text-sm lg:text-base lg:px-8 lg:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 z-10 cursor-pointer mt-6"
         >
           Donate KES {amount ? amount.toLocaleString() : "0"}
         </button>

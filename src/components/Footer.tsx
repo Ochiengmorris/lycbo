@@ -24,9 +24,9 @@ const Footer = () => {
 
             <p className="text-muted-foreground mt-4 text-xs md:text-sm lg:text-base">
               LYCBO is a non-profit organization dedicated to improving the
-              lives of children and families in need. Through our various
-              programs and initiatives, we strive to create lasting change and
-              build a brighter future for all.
+              lives of youth and women in need. Through our various programs and
+              initiatives, we strive to create lasting change and build a
+              brighter future for all.
             </p>
             <div className="flex items-center mt-6 justify-start gap-0">
               <div className="flex-1">
@@ -60,18 +60,18 @@ const Footer = () => {
           </div>
 
           <div className="lg:pl-8 mt-8 lg:mt-0">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center">
               <div className="relative grow">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 pl-12 border rounded-2xl focus:ring-2 focus:outline-none  focus:ring-blue-500 transition-all text-xs md:text-sm lg:text-base"
+                  className="w-full px-4 py-3 pl-12 border rounded-l-full focus:ring-2 focus:outline-none  focus:ring-blue-500 transition-all text-xs md:text-sm lg:text-base"
                   placeholder="your.email@example.com"
                 />
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               </div>
-              <button className="group flex items-center gap-2 px-4 py-2 text-sm lg:text-base lg:px-8 lg:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer">
+              <button className="group flex items-center gap-2 px-4 py-2 text-sm lg:text-base lg:px-8 lg:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer border">
                 Subscribe
               </button>
             </div>

@@ -176,14 +176,14 @@ const AboutUs = () => {
                       className="uppercase shrink-0 font-semibold"
                       variants={itemVariants}
                     >
-                      HealthCare Support
+                      Education Support
                     </motion.h3>
                     <motion.p
                       className="text-sm text-muted-foreground"
                       variants={itemVariants}
                     >
-                      Providing essential healthcare services and resources to
-                      communities
+                      We offer education, mentorship, and professional training
+                      to help them build a sustainable future.
                     </motion.p>
                   </motion.div>
 
@@ -208,7 +208,7 @@ const AboutUs = () => {
                 </div>
 
                 <motion.div
-                  className="flex-1 hidden lg:block bg-gray-300 rounded-2xl p-4 w-full"
+                  className="flex-1 hidden lg:block bg-black/5 rounded-2xl p-4 w-full"
                   variants={statsVariants}
                 >
                   <motion.div
@@ -240,7 +240,7 @@ const AboutUs = () => {
                       className="font-bold mt-2"
                       variants={itemVariants}
                     >
-                      Helper Fund
+                      Helped Fund
                     </motion.h2>
                     <motion.p
                       className="text-muted-foreground mt-2 text-xs"

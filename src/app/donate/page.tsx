@@ -14,7 +14,12 @@ const DonationPage = () => {
       </div>
       <div className="pt-16 pb-8 bg-gray-950 h-[520px]">
         <div className="max-w-7xl mx-auto h-full px-4 flex flex-col justify-center text-white space-y-2">
-          <h1 className="text-7xl font-bold">Donation</h1>
+          <h1
+            // className="text-7xl font-bold "
+            className="bg-gradient-to-r from-blue-600 via-blue-50 via-15% to-purple-100 bg-clip-text text-transparent text-7xl font-bold"
+          >
+            Donation
+          </h1>
           <h3 className="font-semibold flex items-center text-lg">
             <span>Home</span>
             <DotIcon className="size-10 text-gray-400" />

@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle } from "lucide-react";
+import { Check, CheckCheck, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
@@ -213,7 +213,7 @@ const WhyUs = () => {
                           variants={checkmarkVariants}
                           whileHover={{ scale: 1.1 }}
                         >
-                          <CheckCircle className="size-10" />
+                          <CheckCheck className="size-10" />
                         </motion.div>
                         <motion.div
                           className="absolute left-1/2 -translate-x-1/2 -bottom-1 bg-primary/60 w-7 rounded-full aspect-square"
@@ -247,7 +247,7 @@ const WhyUs = () => {
                           variants={checkmarkVariants}
                           whileHover={{ scale: 1.1 }}
                         >
-                          <CheckCircle className="size-10" />
+                          <CheckCheck className="size-10" />
                         </motion.div>
                         <motion.div
                           className="absolute left-1/2 -translate-x-1/2 -bottom-1 bg-primary/60 w-7 rounded-full aspect-square"
